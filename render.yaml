@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: virtual-cinema
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ROOM_PASSWORD
+        generateValue: false
+        # Set this manually in Render dashboard to your chosen password
+        value: cinema123
+      - key: PORT
+        value: 3000
